@@ -98,21 +98,20 @@ project "GLFW"
 			"_CRT_SECURE_NO_WARNINGS"
 		}
 
+		links
+		{
+			"Dwmapi.lib"
+		}
+
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
 
-	filter { "system:windows", "configurations:Debug-AS" }	
-		runtime "Debug"
-		symbols "on"
-		sanitize { "Address" }
-		flags { "NoRuntimeChecks", "NoIncrementalLink" }
-
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "speed"
+		optimize "on"
 
   filter "configurations:Dist"
 		runtime "Release"
-		optimize "speed"
-    symbols "off"
+		optimize "on"
+		symbols "off"

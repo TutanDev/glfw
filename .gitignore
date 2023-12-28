@@ -101,3 +101,8 @@ tests/triangle-vulkan
 tests/window
 tests/windows
 
+# Hawthorn specific
+[Bb]in/
+[Bb]in-intermediates/
+
+
